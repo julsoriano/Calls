@@ -1,0 +1,85 @@
+﻿@model Calls.ViewModels.CallViewModel
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.Title)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.Title)
+    @Html.ValidationMessageFor(model => model.Call.Title)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.nameFirst)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.nameFirst)
+    @Html.ValidationMessageFor(model => model.Call.nameFirst)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.nameLast)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.nameLast)
+    @Html.ValidationMessageFor(model => model.Call.nameLast)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.Street)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.Street)
+    @Html.ValidationMessageFor(model => model.Call.Street)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.Barangay)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.Barangay)
+    @Html.ValidationMessageFor(model => model.Call.Barangay)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.City)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.City)
+    @Html.ValidationMessageFor(model => model.Call.City)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.State)
+</div>
+<div class="editor-field">
+    @Html.DropDownList("Call.State", new SelectList(StatesDictionary.StateSelectList,
+                       "Value", "Text", Model.Call == null ? "" : Model.Call.State))
+    @Html.ValidationMessageFor(model => model.Call.State)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.dateFirstVisit)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.dateFirstVisit)
+    @Html.ValidationMessageFor(model => model.Call.dateFirstVisit)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.dateLastVisit)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.dateLastVisit)
+    @Html.ValidationMessageFor(model => model.Call.dateLastVisit)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Call.Status)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Call.Status)
+    @Html.ValidationMessageFor(model =>model.Call.Status)
+</div>
+
